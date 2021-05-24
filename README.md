@@ -16,7 +16,7 @@
 
 ### 2. **테이블 정의 ( ERD )**
 
-![ERD](https://user-images.githubusercontent.com/70880695/119299822-a68a5080-bc9a-11eb-9b84-b2da9682fa28.jpg)
+![ERD](https://user-images.githubusercontent.com/70880695/119300444-ba828200-bc9b-11eb-8c0e-e399b2aaf5a8.png)
 
 <br/>
 
