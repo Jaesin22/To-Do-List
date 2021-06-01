@@ -1,4 +1,4 @@
-package com.todolist.demo.domain;
+package com.todolist.demo.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,9 +18,16 @@ public class TodoGroup {
     @OneToMany(mappedBy = "todoGroup")
     private List<TodoList> lists = new ArrayList<>();
 
+    public TodoGroup(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
+    public Long getId() {
+        return id;
+    }
 
-
-
-
+    public String getName() {
+        return name;
+    }
 }
