@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles"; // styles 기능 추가
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
 
 function App() {
   return (
@@ -11,4 +12,14 @@ function App() {
   );
 }
 
+function CardHead() {
+  return (
+    <CardHeader>
+      1234
+    </CardHeader>
+  );
+
+}
+
 ReactDOM.render(<App />, document.querySelector("#app"));
+ReactDOM.render(<CardHead />, document.querySelector("#cardheader"));
