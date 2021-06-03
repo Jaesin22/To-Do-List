@@ -1,4 +1,4 @@
-package com.todolist.demo.entity;
+package com.todolist.demo.domain;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,10 +1,12 @@
-package com.todolist.demo.dao;
+package com.todolist.demo.repository;
 
-import com.todolist.demo.entity.TodoGroup;
+import com.todolist.demo.domain.TodoGroup;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+@Repository
 public class TodoGroupRepository {
 
     @PersistenceContext // 해당 어노테이션만 있으면 알아서 엔티티 매니저 생성
@@ -15,6 +17,8 @@ public class TodoGroupRepository {
 
         return todoGroup.getId();
     }
+
+
 
 
 }

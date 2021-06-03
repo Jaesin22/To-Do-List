@@ -1,10 +1,11 @@
-package com.todolist.demo.dao;
+package com.todolist.demo.repository;
 
-import com.todolist.demo.entity.TodoList;
+import com.todolist.demo.domain.TodoList;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import java.util.List;
 
 @Repository
 public class TodoListRepository {
@@ -16,5 +17,10 @@ public class TodoListRepository {
         em.persist(todoList);
 
         return todoList.getId();
+    }
+
+    public List<TodoList> findTodoListAll() {
+        return em.createQuery("select m from TodoList m", TodoList.class)
+                .getResultList();
     }
 }
