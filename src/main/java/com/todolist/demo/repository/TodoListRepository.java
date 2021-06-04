@@ -13,14 +13,24 @@ public class TodoListRepository {
     @PersistenceContext
     private EntityManager em;
 
-    public Long saveTodoList(TodoList todoList) {
-        em.persist(todoList);
-
-        return todoList.getId();
+    public void save(TodoList todoList) {
+        // ID가 없다는 것은 완전히 새로운걸 저장한다는 의미
+        if(todoList.getId() == null) {
+            em.persist(todoList);
+        } else {
+            //dirty checking (update)
+            em.merge(todoList);
+        }
     }
 
-    public List<TodoList> findTodoListAll() {
+    public void remove(TodoList todoList) {
+        em.remove(todoList);
+    }
+
+    // 리스트 전체 조회
+    public List<TodoList> findAll() {
         return em.createQuery("select m from TodoList m", TodoList.class)
                 .getResultList();
     }
+
 }

@@ -1,16 +1,18 @@
 package com.todolist.demo.domain;
 
 import com.todolist.demo.domain.TodoGroup;
+import lombok.Getter;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Repository
+@Getter
 public class TodoList {
 
     @Id @GeneratedValue
-    @Column(name = "LIST_ID")
+    @Column(name = "list_id")
     private Long id;
 
     @Column(nullable = false)
@@ -25,29 +27,11 @@ public class TodoList {
     private boolean complete;   // 완료 여부
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "GROUP_ID")
+    @JoinColumn(name = "group_id")
     private TodoGroup todoGroup;
 
-    public TodoList(Long id, String content, LocalDateTime created_at) {
-        this.id = id;
-        this.content = content;
-        this.created_at = created_at;
-    }
-
-    public void getAllLists() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public void setGroup(TodoGroup todoGroup) {
+        this.todoGroup = todoGroup;
     }
 
     public boolean isStar() {

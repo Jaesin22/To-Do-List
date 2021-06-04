@@ -21,12 +21,6 @@ public class TodoController {
 
         return this.todoService.getTest();
     }
-//
-//    @GetMapping("/")
-//    public String home() {
-//
-//        return this.todoService.getList();
-//    }
 
     @PostMapping("/items/{item_id}")
     public void addTodoList() {

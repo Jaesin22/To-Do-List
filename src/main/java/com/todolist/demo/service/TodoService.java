@@ -31,6 +31,6 @@ public class TodoService {
 
 
     public List<TodoList> getList() {
-        return todoListRepository.findTodoListAll();
+        return todoListRepository.findAll();
     }
 }

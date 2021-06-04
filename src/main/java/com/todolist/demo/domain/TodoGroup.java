@@ -1,14 +1,17 @@
 package com.todolist.demo.domain;
 
+import lombok.Getter;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
 public class TodoGroup {
 
     @Id @GeneratedValue
-    @Column(name = "GROUP_ID")
+    @Column(name = "group_id")
     private Long id;
 
     @Column(nullable = false)
@@ -16,18 +19,6 @@ public class TodoGroup {
 
     // 양방향 연관관계 매핑
     @OneToMany(mappedBy = "todoGroup")
-    private List<TodoList> lists = new ArrayList<>();
+    private List<TodoList> todos = new ArrayList<>();
 
-    public TodoGroup(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
 }
