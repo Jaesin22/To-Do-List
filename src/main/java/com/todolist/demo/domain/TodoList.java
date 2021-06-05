@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Repository
 @Getter
+@Entity
 public class TodoList {
 
     @Id @GeneratedValue

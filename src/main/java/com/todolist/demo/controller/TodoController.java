@@ -1,12 +1,9 @@
 package com.todolist.demo.controller;
 
-import com.todolist.demo.service.TodoService;
-import lombok.RequiredArgsConstructor;
+import com.todolist.demo.service.TodoListService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController // Controller + ResponseBody
@@ -14,12 +11,12 @@ import java.util.Map;
 public class TodoController {
 
     @Autowired
-    private TodoService todoService;
+    private TodoListService todoListService;
 
     @GetMapping("/test")
     public Map<String, String> test() {
 
-        return this.todoService.getTest();
+        return this.todoListService.getTest();
     }
 
     @PostMapping("/items/{item_id}")

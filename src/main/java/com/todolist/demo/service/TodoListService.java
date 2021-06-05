@@ -13,12 +13,12 @@ import java.util.Map;
 
 @Service
 @Transactional
-public class TodoService {
+public class TodoListService {
 
     private final TodoListRepository todoListRepository;
 
     // 생성자 인젝션이 좋은 방법
-    public TodoService(TodoListRepository todoListRepository) {
+    public TodoListService(TodoListRepository todoListRepository) {
         this.todoListRepository = todoListRepository;
     }
 

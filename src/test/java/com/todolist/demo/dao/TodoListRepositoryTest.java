@@ -11,12 +11,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class TodoListRepositoryTest {
 
+    /*
+        테스트
+        1) todolist 추가
+        2) todolist 삭제
+     */
+
+
     @Autowired
     TodoListRepository todoListRepository;
+
+    @Autowired
+
 
     @Test
     public void testTodoList() throws Exception {
         //given
+
         
         //when
         
