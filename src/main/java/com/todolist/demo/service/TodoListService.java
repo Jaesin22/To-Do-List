@@ -1,9 +1,7 @@
 package com.todolist.demo.service;
 
-import com.todolist.demo.domain.TodoGroup;
 import com.todolist.demo.domain.TodoList;
 import com.todolist.demo.repository.TodoListRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,22 +13,22 @@ import java.util.Map;
 @Transactional
 public class TodoListService {
 
-    private final TodoListRepository todoListRepository;
+	private final TodoListRepository todoListRepository;
 
-    // 생성자 인젝션이 좋은 방법
-    public TodoListService(TodoListRepository todoListRepository) {
-        this.todoListRepository = todoListRepository;
-    }
+	// 생성자 인젝션이 좋은 방법
+	public TodoListService(TodoListRepository todoListRepository) {
+		this.todoListRepository = todoListRepository;
+	}
 
-    public Map<String, String> getTest() {
-        Map<String, String> res = new HashMap<>();
-        res.put("key", "value");
+	public Map<String, String> getTest() {
+		Map<String, String> res = new HashMap<>();
+		res.put("key", "value");
 
-        return res;
-    }
+		return res;
+	}
 
 
-    public List<TodoList> getList() {
-        return todoListRepository.findAll();
-    }
+	public List<TodoList> getList() {
+		return todoListRepository.findAll();
+	}
 }

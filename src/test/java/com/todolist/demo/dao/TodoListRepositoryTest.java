@@ -18,19 +18,19 @@ public class TodoListRepositoryTest {
      */
 
 
-    @Autowired
-    TodoListRepository todoListRepository;
+	@Autowired
+	TodoListRepository todoListRepository;
 
-    @Autowired
+	@Autowired
 
 
-    @Test
-    public void testTodoList() throws Exception {
-        //given
+	@Test
+	public void testTodoList() throws Exception {
+		//given
 
-        
-        //when
-        
-        //then
-    }
+
+		//when
+
+		//then
+	}
 }

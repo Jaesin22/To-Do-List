@@ -10,15 +10,16 @@ import java.util.List;
 @Getter
 public class TodoGroup {
 
-    @Id @GeneratedValue
-    @Column(name = "group_id")
-    private Long id;
+	@Id
+	@GeneratedValue
+	@Column(name = "group_id")
+	private Long id;
 
-    @Column(nullable = false)
-    private String name;
+	@Column(nullable = false)
+	private String name;
 
-    // 양방향 연관관계 매핑
-    @OneToMany(mappedBy = "todoGroup")
-    private List<TodoList> todos = new ArrayList<>();
+	// 양방향 연관관계 매핑
+	@OneToMany(mappedBy = "todoGroup")
+	private List<TodoList> todos = new ArrayList<>();
 
 }
