@@ -7,6 +7,7 @@ import { withRouter } from "react-router";
 import Sidebar from '../src/components/sidebar.js';
 import { BrowserRouter } from 'react-router-dom';
 import './Dashboard.css';
+import Navdate from './components/date.js';
 
 function CardHeader() {
   return (
@@ -53,3 +54,5 @@ ReactDOM.render(<CardHeader />, document.querySelector("#cardheader"));
 //   , document.querySelector("#sidemenu"));
 
 // https://www.youtube.com/watch?v=CXa0f4-dWi4 <  sidemenu 만드는 유튜브
+
+ReactDOM.render( <Navdate />, document.querySelector('#Navdate'));
