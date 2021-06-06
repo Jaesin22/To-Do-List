@@ -48,8 +48,6 @@ export default Dashboard
 
 // ReactDOM.render(<App />, document.querySelector("#app"));
 ReactDOM.render(<CardHeader />, document.querySelector("#cardheader"));
-ReactDOM.render(
-  <BrowserRouter>
-    <Sidebar />
-  </BrowserRouter> 
-  , document.querySelector("#sidemenu"));
+// ReactDOM.render(
+//     <Sidebar />
+//   , document.querySelector("#sidemenu"));
